@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class TestsOnLocalApiServer {
 
-    private final static String BASE_URL = "http://localhost:3000/";
+    private final String BASE_URL = "http://localhost:3000/";
 
     @Test (groups = {"GET"})
     public void test_01() {
