@@ -33,24 +33,24 @@ public class RestAssuredDemo {
     public void test_02() {
         baseURI = "https://reqres.in/api";
 
-        given().
-            get("/users?page=2").
-        then().
-            statusCode(200).
-            body("data[1].id",equalTo(8)).
-        log().all();
-    }
+        given()
+            .get("/users?page=2")
+        .then()
+            .statusCode(200)
+            .body("data[1].id",equalTo(8))
+        .log().all();
+}
 
     @Test (groups = {"GET"})
     public void test_03() {
         baseURI = "https://reqres.in/api";
 
-        given().
-            get("/users?page=2").
-        then().
-            statusCode(200).
-            body("data[4].first_name", equalTo("George")).
-            body("data.first_name", hasItems("George","Rachel"));
+        given()
+            .get("/users?page=2")
+        .then()
+            .statusCode(200)
+            .body("data[4].first_name", equalTo("George"))
+            .body("data.first_name", hasItems("George","Rachel"));
     }
 
     @Test (groups = {"POST"})
@@ -61,16 +61,68 @@ public class RestAssuredDemo {
         requestBody.put("name", "Anton");
         requestBody.put("job", "QA");
 
-        given().
-            header("Content-Type","application/json").
-            contentType(ContentType.JSON).
-            accept(ContentType.JSON).
-            body(requestBody.toJSONString()).
-        when().
-            post("/users").
-        then().
-            statusCode(201).
-        log().all();
+        given()
+            .header("Content-Type","application/json")
+            .contentType(ContentType.JSON)
+            .accept(ContentType.JSON)
+            .body(requestBody.toJSONString())
+        .when()
+            .post("/users")
+        .then()
+            .statusCode(201)
+        .log().all();
+    }
+
+    @Test (groups = {"PUT"})
+    public void test_05() {
+        baseURI = "https://reqres.in/api";
+
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("name", "Anton");
+        requestBody.put("job", "QA");
+
+        given()
+            .header("Content-Type","application/json")
+            .contentType(ContentType.JSON)
+            .accept(ContentType.JSON)
+            .body(requestBody.toJSONString())
+        .when()
+            .put("/users/2")
+        .then()
+            .statusCode(200)
+        .log().all();
+    }
+
+    @Test (groups = {"PATCH"})
+    public void test_06() {
+        baseURI = "https://reqres.in/api";
+
+        JSONObject requestBody = new JSONObject();
+        requestBody.put("name", "Anton");
+        requestBody.put("job", "QA");
+
+        given()
+            .header("Content-Type","application/json")
+            .contentType(ContentType.JSON)
+            .accept(ContentType.JSON)
+            .body(requestBody.toJSONString())
+        .when()
+            .patch("/users/2")
+        .then()
+            .statusCode(200)
+        .log().all();
+    }
+
+    @Test (groups = {"DELETE"})
+    public void test_07() {
+        baseURI = "https://reqres.in/api";
+
+        given()
+        .when()
+            .delete("/users/2")
+        .then()
+            .statusCode(204)
+        .log().all();
     }
 
 }
