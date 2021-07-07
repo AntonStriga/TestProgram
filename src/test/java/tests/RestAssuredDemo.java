@@ -50,7 +50,8 @@ public class RestAssuredDemo {
         .then()
             .statusCode(200)
             .body("data[4].first_name", equalTo("George"))
-            .body("data.first_name", hasItems("George","Rachel"));
+            .body("data.first_name", hasItems("George","Rachel"))
+        .log().all();
     }
 
     @Test (groups = {"POST"})
