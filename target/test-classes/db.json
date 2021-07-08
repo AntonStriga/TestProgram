@@ -17,6 +17,18 @@
       "firstName": "John",
       "lastName": "Smith",
       "subjectId": 1
+    },
+    {
+      "firstName": "Albert",
+      "lastName": "Einstein",
+      "subjectId": 2,
+      "id": 4
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Edison",
+      "subjectId": 1,
+      "id": 5
     }
   ],
   "subjects": [
