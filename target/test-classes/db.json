@@ -1,44 +1,22 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Snow",
-      "subjectId": 1
-    },
-    {
-      "id": 2,
-      "firstName": "Jack",
-      "lastName": "Black",
-      "subjectId": 2
-    },
-    {
-      "id": 3,
-      "firstName": "John",
-      "lastName": "Smith",
-      "subjectId": 1
-    },
-    {
-      "firstName": "Albert",
-      "lastName": "Einstein",
-      "subjectId": 2,
-      "id": 4
-    },
-    {
-      "firstName": "Thomas",
-      "lastName": "Edison",
-      "subjectId": 1,
-      "id": 5
-    }
-  ],
-  "subjects": [
-    {
-      "id": 1,
-      "name": "Automation"
-    },
-    {
-      "id": 2,
-      "name": "DevOps"
-    }
-  ]
+	"users": [
+		{
+			"id": 1,
+			"firstName": "John",
+			"lastName": "Snow",
+			"subjectId": 1
+		},
+		{
+			"id": 2,
+			"firstName": "Jack",
+			"lastName": "Black",
+			"subjectId": 2
+		},
+		{
+			"id": 3,
+			"firstName": "John",
+			"lastName": "Smith",
+			"subjectId": 1
+		}
+	]
 }

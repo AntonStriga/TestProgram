@@ -18,15 +18,5 @@
       "lastName": "Smith",
       "subjectId": 1
     }
-  ],
-  "subjects": [
-    {
-      "id": 1,
-      "name": "Automation"
-    },
-    {
-      "id": 2,
-      "name": "DevOps"
-    }
   ]
 }
