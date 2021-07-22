@@ -1,0 +1,10 @@
+<suite name="Suite1" verbose="1" >
+    <test name="Nopackage" >
+        <classes>
+            <class name="tests.DataDrivenTests" />
+            <methods>
+                <include name = "test_03"></include>
+            </methods>
+        </classes>
+    </test>
+</suite>
