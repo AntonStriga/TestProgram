@@ -1,4 +1,4 @@
-package tests;
+package DataProviders;
 
 import org.apache.poi.ss.usermodel.CellType;
 import org.testng.annotations.DataProvider;
